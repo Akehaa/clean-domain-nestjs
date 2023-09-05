@@ -6,7 +6,7 @@ test('create an answer', () => {
 
   const answer = answerQuestion.execute({
     questionId: '1',
-    InstructorId: '1',
+    instructorId: '1',
     content: 'New answer'
   })
 

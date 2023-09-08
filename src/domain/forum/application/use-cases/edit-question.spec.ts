@@ -45,13 +45,13 @@ describe('Edit Question', () => {
 
     await inMemoryQuestionsRepository.create(newQuestion)
 
-    expect(() => {
-      return sut.execute({
+    await expect(() =>
+      sut.execute({
         questionId: newQuestion.id.toValue(),
         authorId: 'author-2',
         title: 'Test question',
         content: 'Test content',
-      })
-    }).rejects.toBeInstanceOf(Error)
+      }),
+    ).rejects.toBeInstanceOf(Error)
   })
 })

@@ -4,15 +4,15 @@ import { Comment, CommentProps } from './comment'
 
 export interface QuestionCommentProps extends CommentProps {
   authorId: UniqueEntityId
-  answerId: UniqueEntityId
+  questionId: UniqueEntityId
   content: string
   createdAt: Date
   updatedAt?: Date
 }
 
 export class QuestionComment extends Comment<QuestionCommentProps> {
-  get answerId() {
-    return this.props.answerId
+  get questionId() {
+    return this.props.questionId
   }
 
   static create(

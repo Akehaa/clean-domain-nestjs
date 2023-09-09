@@ -34,7 +34,7 @@ export class EditQuestionUseCase {
     }
 
     if (authorId !== question.authorId.toString()) {
-      return left(new ResourceNotFoundError())
+      return left(new NotAllowedError())
     }
 
     question.title = title

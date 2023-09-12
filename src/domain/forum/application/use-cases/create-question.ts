@@ -2,7 +2,7 @@ import { Question } from '@/domain/forum/enterprise/entities/question'
 import { QuestionsRepository } from '../repositories/questions-repository'
 import { UniqueEntityId } from '@/core/entities/unique-entity-id'
 import { Either, right } from '@/core/either'
-import { QuestionAttachment } from '../../enterprise/entities/question-attachments'
+import { QuestionAttachment } from '../../enterprise/entities/question-attachment'
 
 interface CreateQuestionUseCaseRequest {
   authorId: string

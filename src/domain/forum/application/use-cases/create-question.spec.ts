@@ -20,8 +20,8 @@ describe('Create Question', () => {
   it('should be able to create a question', async () => {
     const result = await sut.execute({
       authorId: '1',
-      title: 'New question',
-      content: 'New question content',
+      title: 'Nova pergunta',
+      content: 'Conteúdo da pergunta',
       attachmentsIds: ['1', '2'],
     })
 

@@ -26,6 +26,7 @@ export class InMemoryQuestionsRepository implements QuestionsRepository {
     if (!question) {
       return null
     }
+
     return question
   }
 

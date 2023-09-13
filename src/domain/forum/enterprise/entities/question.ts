@@ -83,6 +83,9 @@ export class Question extends AggregateRoot<QuestionProps> {
     if (bestAnswerId && bestAnswerId !== this.props.bestAnswerId) {
       this.addDomainEvent(new QuestionBestAnswerChosenEvent(this, bestAnswerId))
     }
+
+    this.props.bestAnswerId = bestAnswerId
+
     this.touch()
   }
 
